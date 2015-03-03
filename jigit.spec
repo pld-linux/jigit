@@ -8,7 +8,7 @@ Summary:	Tools for working with jigdo files
 Summary(pl.UTF-8):	Narzędzia do pracy z plikami jigdo
 Name:		jigit
 Version:	1.19
-Release:	2
+Release:	3
 License:	GPL v2 (jigit), LGPL v2.1+ (libjte)
 Group:		Libraries
 Source0:	http://www.einval.com/~steve/software/JTE/download/%{name}_%{version}.orig.tar.gz
