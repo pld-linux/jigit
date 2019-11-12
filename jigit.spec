@@ -7,15 +7,17 @@
 Summary:	Tools for working with jigdo files
 Summary(pl.UTF-8):	Narzędzia do pracy z plikami jigdo
 Name:		jigit
-Version:	1.20
+Version:	1.21
 # NOTE: don't reset release unless libjte version changes too
-Release:	4
+Release:	5
 License:	GPL v2 (jigit), LGPL v2.1+ (libjte)
 Group:		Libraries
-Source0:	http://www.einval.com/~steve/software/JTE/download/%{name}_%{version}.orig.tar.gz
-# Source0-md5:	8e6ce0cd2fc93906ebb579544d8a1183
+Source0:	http://www.einval.com/~steve/software/JTE/download/%{name}_%{version}.orig.tar.xz
+# Source0-md5:	2e064c0acfc48e0c8d29348753f72e8a
 URL:		http://www.einval.com/~steve/software/JTE/
 BuildRequires:	bzip2-devel
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
