@@ -3,17 +3,17 @@
 %bcond_without	apidocs		# do not build and package API docs
 #
 # see libjte/configure.ac for version
-%define		libjte_ver	1.0.0
+%define		libjte_ver	2.0.0
 Summary:	Tools for working with jigdo files
 Summary(pl.UTF-8):	Narzędzia do pracy z plikami jigdo
 Name:		jigit
-Version:	1.21
+Version:	1.22
 # NOTE: don't reset release unless libjte version changes too
-Release:	5
+Release:	1
 License:	GPL v2 (jigit), LGPL v2.1+ (libjte)
 Group:		Libraries
-Source0:	http://www.einval.com/~steve/software/JTE/download/%{name}_%{version}.orig.tar.xz
-# Source0-md5:	2e064c0acfc48e0c8d29348753f72e8a
+Source0:	http://www.einval.com/~steve/software/JTE/download/%{name}-%{version}.tar.xz
+# Source0-md5:	faea58b814646ab06f11b33555fe30f2
 URL:		http://www.einval.com/~steve/software/JTE/
 BuildRequires:	bzip2-devel
 BuildRequires:	tar >= 1:1.22
@@ -85,7 +85,7 @@ cd ..
 
 %{__make} jigdump jigit-mkimage jigsum rsyncsum \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} %{rpmcppflags} -Wall -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE"
+	CFLAGS="%{rpmcflags} %{rpmcppflags} -Ilibjte -Wall -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -127,14 +127,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc libjte/{COPYRIGHT,ChangeLog,doc/TODO}
 %attr(755,root,root) %{_libdir}/libjte.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libjte.so.1
+%attr(755,root,root) %ghost %{_libdir}/libjte.so.2
 
 %files -n libjte-devel
 %defattr(644,root,root,755)
 %doc libjte/doc/{API,NOTES}
 %attr(755,root,root) %{_libdir}/libjte.so
 %{_includedir}/libjte
-%{_pkgconfigdir}/libjte-1.pc
+%{_pkgconfigdir}/libjte-2.pc
 
 %files -n libjte-static
 %defattr(644,root,root,755)
