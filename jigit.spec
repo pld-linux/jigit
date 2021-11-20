@@ -9,7 +9,7 @@ Summary(pl.UTF-8):	Narzędzia do pracy z plikami jigdo
 Name:		jigit
 Version:	1.22
 # NOTE: don't reset release unless libjte version changes too
-Release:	1
+Release:	2
 License:	GPL v2 (jigit), LGPL v2.1+ (libjte)
 Group:		Libraries
 Source0:	http://www.einval.com/~steve/software/JTE/download/%{name}-%{version}.tar.xz
